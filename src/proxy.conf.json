@@ -1,0 +1,11 @@
+{
+  "/api": {
+    "target": "https://pokeapi.co",
+    "secure": true,
+    "changeOrigin":true,
+    "logLevel": "info",
+    "pathRewrite":{
+      "/api": "/api/v2"
+    }
+  }
+}

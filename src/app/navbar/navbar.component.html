@@ -1,0 +1,11 @@
+<nav class="nav-wrapper">
+  <ul class="list-elements">
+    <li class="list-element">Pokemon</li>
+    <li routerLink="/home" class="list-element">Home</li>
+    <li class="list-element">Detail</li>
+    <li routerLink="/create-product" *ngIf="admin" class="list-element">Create product</li>
+    <li routerLink="/product-list" *ngIf="admin" class="list-element">Product list</li>
+  </ul>
+
+  <input type="text" class="searchbar" placeholder="Search pokemons.." [(ngModel)]="searchBarValue" (keyup.enter)="onValidation()"/>
+</nav>

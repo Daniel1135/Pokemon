@@ -1,0 +1,39 @@
+<div class="wrapper">
+  <h1 class="pokemon-name">{{ pokemonDetails?.name }}</h1>
+  <div class="pokemon-description">
+    <div class="pokemon-status-wrapper">
+      <img
+        [src]="pokemonDetails?.sprites.back_default"
+        alt="nothing"
+        class="pokemon-img"
+      />
+      <div class="status-wrapper">
+        <div class="pokemon-ability">
+          <p class="grass-ability font-text">grass</p>
+          <p class="poison-ability font-text">poison</p>
+          <p class="special-ability">#1</p>
+        </div>
+        <app-pokemon-status
+          *ngFor="let status of pokemonDetails?.stats"
+          [pokemonStatus]="status"
+        ></app-pokemon-status>
+      </div>
+    </div>
+  </div>
+
+  <div class="pokemon-profile">
+    <h2 class="profile-details">Profile</h2>
+    <ul class="pokemon-details">
+      <li>Height:</li>
+      <li>Catch Rate:</li>
+      <li>Egg Groups:</li>
+      <li>Abilities:</li>
+      <li>Weight:</li>
+      <li>Gender Ratio:</li>
+      <li>Hatch Steps:</li>
+      <li>EVs:</li>
+    </ul>
+  </div>
+  <div class="pokemon-evolution"></div>
+  <div class="pokemon-damage"></div>
+</div>
